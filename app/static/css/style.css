@@ -1,0 +1,126 @@
+/* Custom styles for Task Manager */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.task-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid #007bff;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.task-card.completed {
+    border-left-color: #28a745;
+    background-color: #f8f9fa;
+}
+
+.task-checkbox {
+    transform: scale(1.2);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.priority-high {
+    border-left-color: #dc3545 !important;
+}
+
+.priority-medium {
+    border-left-color: #ffc107 !important;
+}
+
+.priority-low {
+    border-left-color: #28a745 !important;
+}
+
+.btn-group .btn {
+    margin-right: 0;
+}
+
+.pagination {
+    margin-top: 2rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.alert {
+    border: none;
+    border-radius: 8px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .task-card .row {
+        flex-direction: column;
+    }
+    
+    .task-card .col-md-4 {
+        margin-top: 1rem;
+        text-align: left !important;
+    }
+    
+    .btn-group {
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        flex: 1;
+    }
+}
+
+/* Animation for task completion */
+.task-completed {
+    animation: fadeToGray 0.3s ease-in-out;
+}
+
+@keyframes fadeToGray {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: #f8f9fa;
+    }
+}
+
+/* Loading spinner */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
